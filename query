@@ -1,0 +1,4 @@
+select user_id, username, training_id, training_date, count(*)
+from User inner join Training_details on User.user_id = Training_details.user_id
+group by user_id, training_id, training_date
+order by training_date desc;
